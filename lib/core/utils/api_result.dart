@@ -6,14 +6,14 @@ sealed class ApiResult<T> {
   bool get isSuccess => this is SuccessApiResult<T>;
   bool get isError => this is ErrorApiResult<T>;
 
-  AppError? get error {
+  AppError? get getError {
     if (this is ErrorApiResult<T>) {
       return (this as ErrorApiResult<T>).error;
     }
     return null;
   }
 
-  T? get data {
+  T? get getData {
     if (this is SuccessApiResult<T>) {
       return (this as SuccessApiResult<T>).data;
     }

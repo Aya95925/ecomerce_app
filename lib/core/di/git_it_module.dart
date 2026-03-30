@@ -1,0 +1,23 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:dio/dio.dart';
+import 'package:ecomerce_app/core/constant/app_constant.dart';
+import 'package:injectable/injectable.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
+@module
+abstract class GitItModule {
+  @singleton
+  Connectivity createConnectivity() => Connectivity();
+  @singleton
+  Dio createDio() {
+    var dio = Dio(BaseOptions(baseUrl: AppConstant.baseUrl));
+    dio.interceptors.add(PrettyDioLogger(
+
+    ));
+    return dio;
+  }
+}
+// {
+//     "email": "ayaa@gmail.com",
+//     "password": "123456"
+// }
