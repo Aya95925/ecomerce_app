@@ -52,12 +52,13 @@ class _ApiClient implements ApiClient {
 
   @override
   Future<HttpResponse<AuthResponse>> register(
-    InvalidType remoteRegisterRequest,
+    RemoteRegisterRequest remoteRegisterRequest,
   ) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = remoteRegisterRequest;
+    final _data = <String, dynamic>{};
+    _data.addAll(remoteRegisterRequest.toJson());
     final _options = _setStreamType<HttpResponse<AuthResponse>>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(

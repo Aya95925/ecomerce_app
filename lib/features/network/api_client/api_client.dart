@@ -2,8 +2,9 @@
 
 import 'package:dio/dio.dart';
 import 'package:ecomerce_app/features/network/model/request/remote_login_request.dart';
+import 'package:ecomerce_app/features/network/model/request/remote_register_request.dart';
 import 'package:ecomerce_app/features/network/model/response/auth_response/auth_response.dart';
-import 'package:ecomerce_app/features/network/model/response/remote_register_request.dart';
+
 import 'package:injectable/injectable.dart';
 // import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';

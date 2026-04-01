@@ -11,12 +11,11 @@ abstract class GitItModule {
   @singleton
   Dio createDio() {
     var dio = Dio(BaseOptions(baseUrl: AppConstant.baseUrl));
-    dio.interceptors.add(PrettyDioLogger(
-
-    ));
+    dio.interceptors.add(PrettyDioLogger(requestBody: true));
     return dio;
   }
 }
+
 // {
 //     "email": "ayaa@gmail.com",
 //     "password": "123456"
