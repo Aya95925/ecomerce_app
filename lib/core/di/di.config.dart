@@ -14,9 +14,16 @@ import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../../features/auth/data/ecomerce_auth_repo/auth_repo_impl.dart'
+    as _i44;
+import '../../features/auth/data/ecomerce_auth_repo/data_sources/remote_data_source.dart'
+    as _i497;
+import '../../features/auth/data/ecomerce_auth_repo/data_sources/remote_data_source_imp.dart'
+    as _i851;
 import '../../features/auth/domain/repositories/auth_repo.dart' as _i723;
 import '../../features/auth/domain/usecase/login_usecase.dart' as _i911;
 import '../../features/auth/domain/usecase/register_usecase.dart' as _i769;
+import '../../features/auth/ui/screens/login/cubit/login_cubit.dart' as _i413;
 import '../../features/network/api_client/api_client.dart' as _i652;
 import 'git_it_module.dart' as _i710;
 
@@ -31,11 +38,23 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i895.Connectivity>(() => gitItModule.createConnectivity());
     gh.singleton<_i361.Dio>(() => gitItModule.createDio());
     gh.singleton<_i652.ApiClient>(() => _i652.ApiClient(gh<_i361.Dio>()));
+    gh.factory<_i497.RemoteDataSource>(
+      () => _i851.RemoteDataSourceImp(gh<_i652.ApiClient>()),
+    );
+    gh.factory<_i723.AuthRepo>(
+      () => _i44.AuthRepoImpl(
+        gh<_i895.Connectivity>(),
+        gh<_i497.RemoteDataSource>(),
+      ),
+    );
     gh.factory<_i911.LoginUsecase>(
       () => _i911.LoginUsecase(gh<_i723.AuthRepo>()),
     );
-    gh.factory<_i769.LoginUsecase>(
-      () => _i769.LoginUsecase(gh<_i723.AuthRepo>()),
+    gh.factory<_i769.RegisterUsecase>(
+      () => _i769.RegisterUsecase(gh<_i723.AuthRepo>()),
+    );
+    gh.factory<_i413.LoginCubit>(
+      () => _i413.LoginCubit(gh<_i911.LoginUsecase>()),
     );
     return this;
   }

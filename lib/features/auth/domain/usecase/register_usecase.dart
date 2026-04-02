@@ -4,9 +4,9 @@ import 'package:ecomerce_app/features/network/model/request/remote_register_requ
 import 'package:injectable/injectable.dart';
 
 @injectable
-class LoginUsecase {
+class RegisterUsecase {
   final AuthRepo _authRepo;
-  LoginUsecase(this._authRepo);
+  RegisterUsecase(this._authRepo);
   Future<ApiResult<void>> call(RemoteRegisterRequest request) {
     return _authRepo.register(request);
   }

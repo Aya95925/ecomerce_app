@@ -8,7 +8,7 @@ import 'package:ecomerce_app/features/network/model/request/remote_login_request
 import 'package:ecomerce_app/features/network/model/request/remote_register_request.dart';
 import 'package:injectable/injectable.dart';
 
-@Injectable(as: AuthRepoImpl)
+@Injectable(as: AuthRepo)
 class AuthRepoImpl extends AuthRepo {
   final Connectivity _connectivity;
   final RemoteDataSource _remoteDataSource;
