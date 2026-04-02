@@ -9,4 +9,6 @@ final  gitIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: true, // default
 )
-void initDependcies() => gitIt.init();
+Future<void> initDependcies() async {
+  await gitIt.init();
+}

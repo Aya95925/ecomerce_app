@@ -1,18 +1,26 @@
 import 'package:ecomerce_app/core/di/di.dart';
 import 'package:ecomerce_app/core/routes_manager/routes.dart';
+import 'package:ecomerce_app/core/utils/shared_pref.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routes_manager/route_generator.dart';
 
-void main() {
-  initDependcies();
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initDependcies();
+
+  var isLogged =
+      (await gitIt<SharedPrefUtils>().getToken())?.isNotEmpty ?? false;
+
+  runApp(MainApp(isLogged: isLogged));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
 
+class MainApp extends StatelessWidget {
+  const MainApp({super.key, required this.isLogged});
+ final bool isLogged;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -23,7 +31,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: child,
         onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: Routes.signInRoute,
+        initialRoute: isLogged?Routes.mainRoute :Routes.signInRoute,
       ),
     );
   }
