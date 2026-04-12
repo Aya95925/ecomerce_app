@@ -4,7 +4,7 @@ import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/font_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
 import 'package:ecomerce_app/core/utils/values_manager.dart';
-import 'package:ecomerce_app/features/main_layout/categories/presentation/widgets/category_card_item.dart';
+import 'package:ecomerce_app/features/commerce/ui/screens/main_layout/tabs/category/presentation/widgets/category_card_item.dart';
 import 'package:flutter/material.dart';
 
 import 'sub_category_item.dart';

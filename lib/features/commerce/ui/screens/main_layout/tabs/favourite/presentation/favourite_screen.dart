@@ -1,7 +1,7 @@
 
 import 'package:ecomerce_app/core/utils/constants_manager.dart';
 import 'package:ecomerce_app/core/utils/values_manager.dart';
-import 'package:ecomerce_app/features/main_layout/favourite/presentation/widgets/favourite_item.dart';
+import 'package:ecomerce_app/features/commerce/ui/screens/main_layout/tabs/favourite/presentation/widgets/favourite_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

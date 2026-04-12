@@ -1,10 +1,11 @@
 import 'dart:async';
 
-import 'package:ecomerce_app/features/main_layout/home/presentation/widgets/custom_category_widget.dart';
+import 'package:ecomerce_app/features/commerce/ui/screens/main_layout/tabs/home/presentation/widgets/custom_category_widget.dart';
+import 'package:ecomerce_app/features/commerce/ui/screens/main_layout/tabs/home/presentation/widgets/product_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/utils/assets_manager.dart';
+import '../../../../../../../../core/utils/assets_manager.dart';
 import 'widgets/custom_ads_widget.dart';
 import 'widgets/custom_section_bar.dart';
 
@@ -111,8 +112,10 @@ class _HomeTabState extends State<HomeTab> {
               //   ),
               // ),
               SizedBox(height: 12.h),
+              ProductList(),
+              SizedBox(height: 12.h),
             ],
-          )
+          ),
         ],
       ),
     );

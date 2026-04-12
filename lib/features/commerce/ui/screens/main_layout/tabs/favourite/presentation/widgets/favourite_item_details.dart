@@ -3,7 +3,7 @@ import 'package:colornames/colornames.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
 import 'package:ecomerce_app/core/utils/values_manager.dart';
-import 'package:ecomerce_app/features/main_layout/favourite/presentation/widgets/custom_txt_widget.dart';
+import 'package:ecomerce_app/features/commerce/ui/screens/main_layout/tabs/favourite/presentation/widgets/custom_txt_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
