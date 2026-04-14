@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
@@ -71,7 +70,6 @@ class ProductCard extends StatelessWidget {
             //     ),
             //   ),
             // ),
-
             Expanded(
               flex: 1,
               child: Stack(
@@ -86,10 +84,7 @@ class ProductCard extends StatelessWidget {
                       ),
                       child: AspectRatio(
                         aspectRatio: 16 / 9,
-                        child: Image.asset(
-                          image,
-                          fit: BoxFit.cover,
-                        ),
+                        child: Image.asset(image, fit: BoxFit.cover),
                       ),
                     ),
                   ),

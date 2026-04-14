@@ -25,8 +25,8 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<ApiResult<void>> register(
     RemoteRegisterRequest remoteRegisterRequest,
-  )async {
-      if (await _connectivity.isConnected) {
+  ) async {
+    if (await _connectivity.isConnected) {
       return _remoteDataSource.register(remoteRegisterRequest);
     } else {
       return ErrorApiResult(NetworkError());

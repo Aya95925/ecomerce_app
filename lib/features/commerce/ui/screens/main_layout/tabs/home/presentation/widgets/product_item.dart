@@ -1,6 +1,7 @@
+
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecomerce_app/core/widget/heart_button.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,9 +22,7 @@ class ProductItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.r),
         ),
         alignment: Alignment.topRight,
-        child: HeartButton(
-          onTap: onTap,
-        ),
+        child: HeartButton(onTap: onTap),
       ),
     );
   }

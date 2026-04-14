@@ -1,5 +1,3 @@
-
-
 import 'package:ecomerce_app/core/utils/app_error.dart';
 
 sealed class ApiResult<T> {
@@ -20,6 +18,7 @@ sealed class ApiResult<T> {
     return null;
   }
 }
+
 class SuccessApiResult<T> extends ApiResult<T> {
   @override
   final T? data;

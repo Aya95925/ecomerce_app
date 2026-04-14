@@ -17,10 +17,9 @@ void main() async {
   runApp(MainApp(isLogged: isLogged));
 }
 
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key, required this.isLogged});
- final bool isLogged;
+  final bool isLogged;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -31,7 +30,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: child,
         onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: isLogged?Routes.mainRoute :Routes.signInRoute,
+        initialRoute: isLogged ? Routes.mainRoute : Routes.signInRoute,
       ),
     );
   }

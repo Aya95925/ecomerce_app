@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/font_manager.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +27,9 @@ class BuildTextField extends StatefulWidget {
     this.validation,
     this.onTap,
     this.maxLines,
-    this.prefixIcon, this.borderBackgroundColor, this.suffixIcon,
+    this.prefixIcon,
+    this.borderBackgroundColor,
+    this.suffixIcon,
   });
 
   final TextEditingController? controller;
@@ -66,23 +67,27 @@ class _BuildTextFieldState extends State<BuildTextField> {
       children: [
         widget.label != null
             ? Padding(
-                padding: const EdgeInsets.only(
-                     top: AppPadding.p2),
+                padding: const EdgeInsets.only(top: AppPadding.p2),
                 child: Text(
                   widget.label!,
-                  style: widget.labelTextStyle ??
-                      getMediumStyle(color: ColorManager.white)
-                          .copyWith(fontSize: FontSize.s18.sp),
+                  style:
+                      widget.labelTextStyle ??
+                      getMediumStyle(
+                        color: ColorManager.white,
+                      ).copyWith(fontSize: FontSize.s18.sp),
                 ),
               )
             : const SizedBox(),
         Container(
           margin: const EdgeInsets.only(top: AppMargin.m5),
           decoration: BoxDecoration(
-            color: widget.backgroundColor ??
+            color:
+                widget.backgroundColor ??
                 ColorManager.darkGrey.withOpacity(.15),
             borderRadius: BorderRadius.circular(AppSize.s8),
-            border: Border.all(color: widget.borderBackgroundColor ?? ColorManager.transparent )
+            border: Border.all(
+              color: widget.borderBackgroundColor ?? ColorManager.transparent,
+            ),
           ),
           clipBehavior: Clip.antiAliasWithSaveLayer,
           child: TextFormField(
@@ -90,8 +95,9 @@ class _BuildTextFieldState extends State<BuildTextField> {
             controller: widget.controller,
             focusNode: widget.focusNode,
             readOnly: widget.readOnly,
-            style: getMediumStyle(color: ColorManager.black)
-                .copyWith(fontSize: FontSize.s18.sp),
+            style: getMediumStyle(
+              color: ColorManager.black,
+            ).copyWith(fontSize: FontSize.s18.sp),
             obscureText: hidden,
             keyboardType: widget.textInputType,
             obscuringCharacter: '*',
@@ -125,11 +131,9 @@ class _BuildTextFieldState extends State<BuildTextField> {
               suffixIcon: widget.isObscured
                   ? IconButton(
                       onPressed: () {
-                        setState(
-                          () {
-                            hidden = !hidden;
-                          },
-                        );
+                        setState(() {
+                          hidden = !hidden;
+                        });
                       },
                       iconSize: AppSize.s24,
                       splashRadius: AppSize.s1,
@@ -139,9 +143,11 @@ class _BuildTextFieldState extends State<BuildTextField> {
                       icon: SvgPicture.asset(SvgAssets.eye),
                     )
                   : widget.suffixIcon,
-              hintStyle: widget.hintTextStyle ??
-                  getRegularStyle(color: ColorManager.grey)
-                      .copyWith(fontSize: 18.sp),
+              hintStyle:
+                  widget.hintTextStyle ??
+                  getRegularStyle(
+                    color: ColorManager.grey,
+                  ).copyWith(fontSize: 18.sp),
               border: InputBorder.none,
               enabledBorder: InputBorder.none,
               errorStyle: TextStyle(
@@ -160,8 +166,9 @@ class _BuildTextFieldState extends State<BuildTextField> {
                 ),
                 child: Text(
                   errorText!,
-                  style: getMediumStyle(color: ColorManager.white)
-                      .copyWith(fontSize: 18.sp),
+                  style: getMediumStyle(
+                    color: ColorManager.white,
+                  ).copyWith(fontSize: 18.sp),
                 ),
               ),
       ],

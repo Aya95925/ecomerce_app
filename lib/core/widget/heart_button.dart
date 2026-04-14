@@ -1,5 +1,3 @@
-
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +23,9 @@ class _HeartButtonState extends State<HeartButton> {
       onTap: () {
         setState(() {
           isClicked = !isClicked;
-          heartIcon =
-              !isClicked ? IconsAssets.icHeart : IconsAssets.icClickedHeart;
+          heartIcon = !isClicked
+              ? IconsAssets.icHeart
+              : IconsAssets.icClickedHeart;
           widget.onTap?.call();
         });
       },
@@ -37,12 +36,9 @@ class _HeartButtonState extends State<HeartButton> {
         shape: const StadiumBorder(),
         shadowColor: ColorManager.black,
         child: Padding(
-            padding: const EdgeInsets.all(6),
-            child: ImageIcon(
-              
-              AssetImage(heartIcon),
-              color: ColorManager.primary,
-            )),
+          padding: const EdgeInsets.all(6),
+          child: ImageIcon(AssetImage(heartIcon), color: ColorManager.primary),
+        ),
       ),
     );
   }

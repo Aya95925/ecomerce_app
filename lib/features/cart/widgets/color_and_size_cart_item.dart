@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
 import 'package:ecomerce_app/core/utils/values_manager.dart';
@@ -19,10 +18,7 @@ class ColorAndSizeCartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          radius: 7.5.r,
-          backgroundColor: color,
-        ),
+        CircleAvatar(radius: 7.5.r, backgroundColor: color),
         SizedBox(width: 5.w),
         Text(
           colorName,
@@ -44,8 +40,9 @@ class ColorAndSizeCartItem extends StatelessWidget {
         Text(
           'Size: $size',
           style: getRegularStyle(
-              color: ColorManager.textColor.withOpacity(0.5),
-              fontSize: AppSize.s14.sp),
+            color: ColorManager.textColor.withOpacity(0.5),
+            fontSize: AppSize.s14.sp,
+          ),
         ),
       ],
     );

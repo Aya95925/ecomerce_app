@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/widget/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,13 +24,9 @@ class SignUpScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: AppSize.s40.h,
-                ),
+                SizedBox(height: AppSize.s40.h),
                 Center(child: SvgPicture.asset(SvgAssets.routeLogo)),
-                SizedBox(
-                  height: AppSize.s40.h,
-                ),
+                SizedBox(height: AppSize.s40.h),
                 BuildTextField(
                   backgroundColor: ColorManager.white,
                   hint: 'enter your full name',
@@ -39,9 +34,7 @@ class SignUpScreen extends StatelessWidget {
                   textInputType: TextInputType.name,
                   validation: AppValidators.validateFullName,
                 ),
-                SizedBox(
-                  height: AppSize.s18.h,
-                ),
+                SizedBox(height: AppSize.s18.h),
                 BuildTextField(
                   hint: 'enter your mobile no.',
                   backgroundColor: ColorManager.white,
@@ -49,9 +42,7 @@ class SignUpScreen extends StatelessWidget {
                   validation: AppValidators.validatePhoneNumber,
                   textInputType: TextInputType.phone,
                 ),
-                SizedBox(
-                  height: AppSize.s18.h,
-                ),
+                SizedBox(height: AppSize.s18.h),
                 BuildTextField(
                   hint: 'enter your email address',
                   backgroundColor: ColorManager.white,
@@ -59,9 +50,7 @@ class SignUpScreen extends StatelessWidget {
                   validation: AppValidators.validateEmail,
                   textInputType: TextInputType.emailAddress,
                 ),
-                SizedBox(
-                  height: AppSize.s18.h,
-                ),
+                SizedBox(height: AppSize.s18.h),
                 BuildTextField(
                   hint: 'enter your password',
                   backgroundColor: ColorManager.white,
@@ -70,9 +59,7 @@ class SignUpScreen extends StatelessWidget {
                   isObscured: true,
                   textInputType: TextInputType.text,
                 ),
-                SizedBox(
-                  height: AppSize.s50.h,
-                ),
+                SizedBox(height: AppSize.s50.h),
                 Center(
                   child: SizedBox(
                     height: AppSize.s60.h,
@@ -82,7 +69,9 @@ class SignUpScreen extends StatelessWidget {
                       label: 'Sign Up',
                       backgroundColor: ColorManager.white,
                       textStyle: getBoldStyle(
-                          color: ColorManager.primary, fontSize: AppSize.s20),
+                        color: ColorManager.primary,
+                        fontSize: AppSize.s20,
+                      ),
                       onTap: () {},
                     ),
                   ),

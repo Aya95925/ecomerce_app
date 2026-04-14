@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/font_manager.dart';
@@ -23,29 +22,36 @@ class SubCategoriesList extends StatelessWidget {
             child: Text(
               'Laptops & Electronics',
               style: getBoldStyle(
-                  color: ColorManager.primary, fontSize: FontSize.s14),
+                color: ColorManager.primary,
+                fontSize: FontSize.s14,
+              ),
             ),
           ),
           // the category card
           SliverToBoxAdapter(
-            child: CategoryCardItem("Laptops & Electronics",
-                ImageAssets.categoryCardImage, goToCategoryProductsListScreen),
+            child: CategoryCardItem(
+              "Laptops & Electronics",
+              ImageAssets.categoryCardImage,
+              goToCategoryProductsListScreen,
+            ),
           ),
           // the grid view of the subcategories
           SliverGrid(
-              delegate: SliverChildBuilderDelegate(
-                childCount: 26,
-                (context, index) => SubCategoryItem(
-                    'Watches',
-                    ImageAssets.subcategoryCardImage,
-                    goToCategoryProductsListScreen),
+            delegate: SliverChildBuilderDelegate(
+              childCount: 26,
+              (context, index) => SubCategoryItem(
+                'Watches',
+                ImageAssets.subcategoryCardImage,
+                goToCategoryProductsListScreen,
               ),
-              gridDelegate: const  SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                childAspectRatio: 0.75,
-                mainAxisSpacing: AppSize.s8,
-                crossAxisSpacing: AppSize.s8,
-              ))
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              childAspectRatio: 0.75,
+              mainAxisSpacing: AppSize.s8,
+              crossAxisSpacing: AppSize.s8,
+            ),
+          ),
         ],
       ),
     );

@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
 import 'package:ecomerce_app/core/utils/values_manager.dart';
@@ -7,8 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TotalPriceAndCheckoutBotton extends StatelessWidget {
-  const TotalPriceAndCheckoutBotton(
-      {super.key, required this.totalPrice, required this.checkoutButtonOnTap});
+  const TotalPriceAndCheckoutBotton({
+    super.key,
+    required this.totalPrice,
+    required this.checkoutButtonOnTap,
+  });
   final int totalPrice;
   final void Function() checkoutButtonOnTap;
   @override
@@ -50,12 +52,9 @@ class TotalPriceAndCheckoutBotton extends StatelessWidget {
           child: CustomElevatedButton(
             label: 'Check Out',
             onTap: checkoutButtonOnTap,
-            suffixIcon: Icon(
-              Icons.arrow_forward,
-              color: ColorManager.white,
-            ),
+            suffixIcon: Icon(Icons.arrow_forward, color: ColorManager.white),
           ),
-        )
+        ),
       ],
     );
   }

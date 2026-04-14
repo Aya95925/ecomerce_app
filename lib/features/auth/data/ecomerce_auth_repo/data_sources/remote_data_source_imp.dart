@@ -16,10 +16,9 @@ class RemoteDataSourceImp extends RemoteDataSource {
   Future<ApiResult<AuthResponse>> login(RemoteLoginRequest loginRequest) async {
     try {
       var response = await _apiClient.login(loginRequest);
-        if (response.data.token != null && response.data.user != null) {
+      if (response.data.token != null && response.data.user != null) {
         _sharedPrefUtils.saveToken(response.data.token!);
         _sharedPrefUtils.saveUser(response.data.user!);
-
       }
       return SuccessApiResult(response.data);
     } catch (e) {
@@ -35,7 +34,6 @@ class RemoteDataSourceImp extends RemoteDataSource {
       if (response.data.token != null && response.data.user != null) {
         _sharedPrefUtils.saveToken(response.data.token!);
         _sharedPrefUtils.saveUser(response.data.user!);
-
       }
       return SuccessApiResult(response.data);
     } catch (e) {

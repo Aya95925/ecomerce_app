@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/values_manager.dart';
 import 'package:ecomerce_app/features/commerce/ui/screens/main_layout/tabs/category/presentation/widgets/categories_list.dart';
 import 'package:flutter/material.dart';
@@ -12,14 +11,14 @@ class CategoriesTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.symmetric(
-          horizontal: AppPadding.p12, vertical: AppPadding.p12),
+        horizontal: AppPadding.p12,
+        vertical: AppPadding.p12,
+      ),
       child: Row(
         children: [
           CategoriesList(),
-          SizedBox(
-            width: AppSize.s16,
-          ),
-          SubCategoriesList()
+          SizedBox(width: AppSize.s16),
+          SubCategoriesList(),
         ],
       ),
     );

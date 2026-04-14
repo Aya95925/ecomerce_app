@@ -15,7 +15,7 @@ class Resources<T> {
   Resources.initials() {
     status = ApiStatus.initial;
   }
-  Resources.isError(String this.error){
-    status=ApiStatus.error;
+  Resources.isError(String this.error) {
+    status = ApiStatus.error;
   }
 }

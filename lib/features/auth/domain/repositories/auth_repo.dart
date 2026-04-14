@@ -4,7 +4,5 @@ import 'package:ecomerce_app/features/network/model/request/remote_register_requ
 
 abstract class AuthRepo {
   Future<ApiResult<void>> login(RemoteLoginRequest remoteLoginRequest);
-  Future<ApiResult<void>> register(
-    RemoteRegisterRequest remoteRegisterRequest,
-  );
+  Future<ApiResult<void>> register(RemoteRegisterRequest remoteRegisterRequest);
 }

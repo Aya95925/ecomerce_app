@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
@@ -24,9 +23,7 @@ class CartScreen extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: ImageIcon(
-              AssetImage(
-                IconsAssets.icSearch,
-              ),
+              AssetImage(IconsAssets.icSearch),
               color: ColorManager.primary,
             ),
           ),

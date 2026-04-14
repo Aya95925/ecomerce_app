@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/font_manager.dart';
@@ -46,13 +45,16 @@ class ProfileTabState extends State<ProfileTab> {
               Text(
                 'Welcome, Mohamed',
                 style: getSemiBoldStyle(
-                    color: ColorManager.primary, fontSize: FontSize.s18),
+                  color: ColorManager.primary,
+                  fontSize: FontSize.s18,
+                ),
               ),
               Text(
                 'mohamed.N@gmail.com',
                 style: getRegularStyle(
-                    color: ColorManager.primary.withOpacity(.5),
-                    fontSize: FontSize.s14),
+                  color: ColorManager.primary.withOpacity(.5),
+                  fontSize: FontSize.s14,
+                ),
               ),
               SizedBox(height: AppSize.s18.h),
               BuildTextField(
@@ -61,10 +63,13 @@ class ProfileTabState extends State<ProfileTab> {
                 backgroundColor: ColorManager.white,
                 hint: 'Enter your full name',
                 label: 'Full Name',
-                controller:
-                    TextEditingController(text: 'Mohamed Mohamed Nabil'),
+                controller: TextEditingController(
+                  text: 'Mohamed Mohamed Nabil',
+                ),
                 labelTextStyle: getMediumStyle(
-                    color: ColorManager.primary, fontSize: FontSize.s18),
+                  color: ColorManager.primary,
+                  fontSize: FontSize.s18,
+                ),
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(SvgAssets.edit),
                   onPressed: () {
@@ -75,8 +80,9 @@ class ProfileTabState extends State<ProfileTab> {
                 ),
                 textInputType: TextInputType.text,
                 validation: AppValidators.validateFullName,
-                hintTextStyle: getRegularStyle(color: ColorManager.primary)
-                    .copyWith(fontSize: 18.sp),
+                hintTextStyle: getRegularStyle(
+                  color: ColorManager.primary,
+                ).copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: AppSize.s18.h),
               BuildTextField(
@@ -87,7 +93,9 @@ class ProfileTabState extends State<ProfileTab> {
                 label: 'E-mail address',
                 controller: TextEditingController(text: 'mohamed.N@gmail.com'),
                 labelTextStyle: getMediumStyle(
-                    color: ColorManager.primary, fontSize: FontSize.s18),
+                  color: ColorManager.primary,
+                  fontSize: FontSize.s18,
+                ),
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(SvgAssets.edit),
                   onPressed: () {
@@ -98,8 +106,9 @@ class ProfileTabState extends State<ProfileTab> {
                 ),
                 textInputType: TextInputType.emailAddress,
                 validation: AppValidators.validateEmail,
-                hintTextStyle: getRegularStyle(color: ColorManager.primary)
-                    .copyWith(fontSize: 18.sp),
+                hintTextStyle: getRegularStyle(
+                  color: ColorManager.primary,
+                ).copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: AppSize.s18.h),
               BuildTextField(
@@ -116,12 +125,15 @@ class ProfileTabState extends State<ProfileTab> {
                 label: 'Password',
                 isObscured: true,
                 labelTextStyle: getMediumStyle(
-                    color: ColorManager.primary, fontSize: FontSize.s18),
+                  color: ColorManager.primary,
+                  fontSize: FontSize.s18,
+                ),
                 suffixIcon: SvgPicture.asset(SvgAssets.edit),
                 textInputType: TextInputType.text,
                 validation: AppValidators.validatePassword,
-                hintTextStyle: getRegularStyle(color: ColorManager.primary)
-                    .copyWith(fontSize: 18.sp),
+                hintTextStyle: getRegularStyle(
+                  color: ColorManager.primary,
+                ).copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: AppSize.s18.h),
               BuildTextField(
@@ -132,7 +144,9 @@ class ProfileTabState extends State<ProfileTab> {
                 hint: 'Enter your mobile no.',
                 label: 'Your mobile number',
                 labelTextStyle: getMediumStyle(
-                    color: ColorManager.primary, fontSize: FontSize.s18),
+                  color: ColorManager.primary,
+                  fontSize: FontSize.s18,
+                ),
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(SvgAssets.edit),
                   onPressed: () {
@@ -143,20 +157,24 @@ class ProfileTabState extends State<ProfileTab> {
                 ),
                 textInputType: TextInputType.phone,
                 validation: AppValidators.validatePhoneNumber,
-                hintTextStyle: getRegularStyle(color: ColorManager.primary)
-                    .copyWith(fontSize: 18.sp),
+                hintTextStyle: getRegularStyle(
+                  color: ColorManager.primary,
+                ).copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: AppSize.s18.h),
               BuildTextField(
-                controller:
-                    TextEditingController(text: '6th October, street 11.....'),
+                controller: TextEditingController(
+                  text: '6th October, street 11.....',
+                ),
                 borderBackgroundColor: ColorManager.primary.withOpacity(.5),
                 readOnly: isAddressReadOnly,
                 backgroundColor: ColorManager.white,
                 hint: '6th October, street 11.....',
                 label: 'Your Address',
                 labelTextStyle: getMediumStyle(
-                    color: ColorManager.primary, fontSize: FontSize.s18),
+                  color: ColorManager.primary,
+                  fontSize: FontSize.s18,
+                ),
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(SvgAssets.edit),
                   onPressed: () {
@@ -167,8 +185,9 @@ class ProfileTabState extends State<ProfileTab> {
                 ),
                 textInputType: TextInputType.streetAddress,
                 validation: AppValidators.validateFullName,
-                hintTextStyle: getRegularStyle(color: ColorManager.primary)
-                    .copyWith(fontSize: 18.sp),
+                hintTextStyle: getRegularStyle(
+                  color: ColorManager.primary,
+                ).copyWith(fontSize: 18.sp),
               ),
               SizedBox(height: AppSize.s50.h),
             ],

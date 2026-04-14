@@ -4,6 +4,7 @@ import 'package:ecomerce_app/features/auth/ui/screens/login/cubit/login_state.da
 import 'package:ecomerce_app/features/network/model/request/remote_login_request.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+
 @injectable
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this._loginUsecase) : super(LoginState.initial());

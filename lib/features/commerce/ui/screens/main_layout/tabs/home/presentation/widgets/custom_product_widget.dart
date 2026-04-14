@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
 import 'package:ecomerce_app/core/routes_manager/routes.dart';
@@ -84,18 +83,16 @@ class CustomProductWidget extends StatelessWidget {
                   //   fit: BoxFit.cover,
                   // ),
                   ClipRRect(
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(14.r)),
-                    child: Image.asset(
-                      image,
-                      fit: BoxFit.cover,
-                      width: width,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(14.r),
                     ),
+                    child: Image.asset(image, fit: BoxFit.cover, width: width),
                   ),
                   Positioned(
-                      top: height * 0.01,
-                      right: width * 0.02,
-                      child: HeartButton(onTap: () {})),
+                    top: height * 0.01,
+                    right: width * 0.02,
+                    child: HeartButton(onTap: () {}),
+                  ),
                 ],
               ),
             ),
@@ -176,15 +173,12 @@ class CustomProductWidget extends StatelessWidget {
                                 shape: BoxShape.circle,
                                 color: ColorManager.primary,
                               ),
-                              child: const Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
+                              child: const Icon(Icons.add, color: Colors.white),
                             ),
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),

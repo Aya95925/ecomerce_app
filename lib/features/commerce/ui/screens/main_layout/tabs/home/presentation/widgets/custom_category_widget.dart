@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/assets_manager.dart';
 import 'package:ecomerce_app/core/utils/color_manager.dart';
 import 'package:ecomerce_app/core/utils/styles_manager.dart';
@@ -33,15 +32,12 @@ class CustomCategoryWidget extends StatelessWidget {
         //     );
         //   },
         // ),
-
         ClipRRect(
           borderRadius: BorderRadius.circular(100.r),
           child: Container(
             height: 100.h,
             width: 100.w,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-            ),
+            decoration: const BoxDecoration(shape: BoxShape.circle),
             child: Image.asset(
               ImageAssets.categoryHomeImage,
               fit: BoxFit.cover,

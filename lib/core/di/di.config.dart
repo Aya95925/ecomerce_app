@@ -25,6 +25,19 @@ import '../../features/auth/domain/repositories/auth_repo.dart' as _i723;
 import '../../features/auth/domain/usecase/login_usecase.dart' as _i911;
 import '../../features/auth/domain/usecase/register_usecase.dart' as _i769;
 import '../../features/auth/ui/screens/login/cubit/login_cubit.dart' as _i413;
+import '../../features/commerce/data/repositories/data_sources/home_remote_data_source.dart'
+    as _i880;
+import '../../features/commerce/data/repositories/data_sources/home_remote_data_source_impl.dart'
+    as _i1073;
+import '../../features/commerce/data/repositories/home_repo_impl.dart'
+    as _i1028;
+import '../../features/commerce/domain/repositories/home_repo.dart' as _i972;
+import '../../features/commerce/domain/usecases/get_category_use_case.dart'
+    as _i466;
+import '../../features/commerce/domain/usecases/get_product_use_case.dart'
+    as _i316;
+import '../../features/commerce/domain/usecases/get_sub_category_use_case.dart'
+    as _i589;
 import '../../features/network/api_client/api_client.dart' as _i652;
 import '../utils/shared_pref.dart' as _i979;
 import 'git_it_module.dart' as _i710;
@@ -59,11 +72,29 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i497.RemoteDataSource>(),
       ),
     );
+    gh.factory<_i880.HomeRemoteDataSource>(
+      () => _i1073.HomeRemoteDataSourceImpl(gh<_i652.ApiClient>()),
+    );
+    gh.factory<_i972.HomeRepo>(
+      () => _i1028.HomeRepoImpl(
+        gh<_i880.HomeRemoteDataSource>(),
+        gh<_i895.Connectivity>(),
+      ),
+    );
     gh.factory<_i911.LoginUsecase>(
       () => _i911.LoginUsecase(gh<_i723.AuthRepo>()),
     );
     gh.factory<_i769.RegisterUsecase>(
       () => _i769.RegisterUsecase(gh<_i723.AuthRepo>()),
+    );
+    gh.factory<_i466.GetAllCategoriesUseCase>(
+      () => _i466.GetAllCategoriesUseCase(gh<_i972.HomeRepo>()),
+    );
+    gh.factory<_i316.GetAllProductUseCase>(
+      () => _i316.GetAllProductUseCase(gh<_i972.HomeRepo>()),
+    );
+    gh.factory<_i589.GetSubCategoryUseCase>(
+      () => _i589.GetSubCategoryUseCase(gh<_i972.HomeRepo>()),
     );
     gh.factory<_i413.LoginCubit>(
       () => _i413.LoginCubit(gh<_i911.LoginUsecase>()),

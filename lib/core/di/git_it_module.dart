@@ -15,9 +15,9 @@ abstract class GitItModule {
     dio.interceptors.add(PrettyDioLogger(requestBody: true));
     return dio;
   }
- @preResolve
-  Future<SharedPreferences> get prefs =>
-      SharedPreferences.getInstance();
+
+  @preResolve
+  Future<SharedPreferences> get prefs => SharedPreferences.getInstance();
 }
 
 // {

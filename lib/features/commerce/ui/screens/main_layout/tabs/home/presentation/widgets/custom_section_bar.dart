@@ -1,4 +1,3 @@
-
 import 'package:ecomerce_app/core/utils/values_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +7,11 @@ import '../../../../../../../../../core/utils/styles_manager.dart';
 class CustomSectionBar extends StatelessWidget {
   final String sectionNname;
   final Function function;
-  const CustomSectionBar(
-      {super.key, required this.sectionNname, required this.function});
+  const CustomSectionBar({
+    super.key,
+    required this.sectionNname,
+    required this.function,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,7 @@ class CustomSectionBar extends StatelessWidget {
         children: [
           Text(
             sectionNname,
-            style: getMediumStyle(
-              fontSize: 18,
-              color: ColorManager.darkBlue,
-            ),
+            style: getMediumStyle(fontSize: 18, color: ColorManager.darkBlue),
           ),
           TextButton(
             onPressed: () {
